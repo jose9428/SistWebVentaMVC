@@ -1,0 +1,63 @@
+﻿@model SistWebVentaMVC.Models.Producto
+
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<div class="container">
+     @Html.Partial("~/Views/Shared/Mensajes.cshtml")
+
+    <div class="card">
+      <div class="card-header">
+        Nuevo Producto
+      </div>
+      <div class="card-body">
+        <form asp-action="Crear" class="row g-3" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+              <div class="col-md-6">
+                <label class="form-label">Nombres</label>
+                <input asp-for="nombre" class="form-control"  />
+                 <span asp-validation-for="nombre" class="text-danger"></span>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Precio</label>
+                <input asp-for="precio" class="form-control" />
+                <span asp-validation-for="precio" class="text-danger"></span>
+              </div>
+
+               <div class="col-md-6">
+                <label class="form-label">Stock</label>
+                 <input asp-for="stock" class="form-control" />
+                 <span asp-validation-for="stock" class="text-danger"></span>
+              </div>
+
+               <div class="col-md-6">
+                <label class="form-label">Imagen</label>
+                 <input class="form-control" type="file" name="archivo" id="archivo"  />
+              </div>
+
+
+              <div class="col-md-6">
+                <label class="form-label">Estado</label>
+                @Html.DropDownList("estado",  (IEnumerable<SelectListItem>)ViewBag.estados,  new { @class = "form-control" })
+              </div>
+
+            <br />
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-save"></i> Guardar Cambios
+                </button>
+            </div>
+        </form>
+        
+        <div>
+            <a asp-action="Index">Volver atras</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

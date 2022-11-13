@@ -1,0 +1,79 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json;
+@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SistVenta</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SistWebVentaMVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css" integrity="sha512-eBNnVs5xPOVglLWDGXyZnZZ2K2ixXhR/3aECgCpFnW2dGCd/yiqXZ6fcB3BubeA91kM6NX234b6Wrah8RiYAPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    @{
+        var existeUser = @Context.Session.GetString("usuario");
+        Usuario userLogeado = null;
+
+        if (existeUser != null)
+        {
+            userLogeado = JsonConvert.DeserializeObject<Usuario>(existeUser);
+        }
+    }
+     <header class="p-3 mb-3 border-bottom bg-info">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+             <img src="~/img/recursos/logo.jpg" class="img-fluid rounded-circle" width="60" height="40" /	/>			
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            @if (User.IsInRole("ADMIN"))
+            {
+              <li><a asp-controller="Rol" asp-action="Index" class="nav-link px-2 link-dark">Rol</a></li>
+            }
+
+              <li><a asp-controller="Usuario" asp-action="Index" class="nav-link px-2 link-dark">Usuario</a></li>
+              <li><a asp-controller="Producto" asp-action="Index" class="nav-link px-2 link-dark">Productos</a></li>
+            </ul>
+
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://thumbs.dreamstime.com/b/vector-el-icono-del-avatar-del-usuario-para-el-sitio-web-o-el-m%C3%B3vil-45836554.jpg" alt="mdo" width="32" height="32" class="rounded-circle"> 
+                @User.Identity.Name - @User.FindAll(ClaimTypes.Role).ToList()[0].Value
+                <!-- User.Claims.ToList()[3].Value  -->
+              </a>
+              <ul class="dropdown-menu text-small">
+                <!-- 
+                    <li><hr class="dropdown-divider"></li>
+                -->
+                <li><a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SistWebVentaMVC 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

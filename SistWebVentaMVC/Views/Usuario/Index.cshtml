@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SistWebVentaMVC.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Lista Usuarios";
+}
+<small class="text-muted" style="font-size:17px;">Gestión de Usuarios</small>
+<hr />
+<p>
+    <!--
+        En el html agregar arrobal y class antes
+    Html.ActionLink("Nuevo Usuario", "Crear", new {}, new { class = "btn btn-success btn-sm" }) <br />
+    -->
+    <a asp-controller="Usuario" asp-action="Crear" class="btn btn-success btn-sm">
+        <i class="fa fa-plus-circle"></i> Nuevo
+    </a>
+</p>
+
+@Html.Partial("~/Views/Shared/Mensajes.cshtml")
+
+<div class="table-responsible">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Fecha Nacimiento</th>
+                <th>Sueldo</th>
+                <th>Rol</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.correo)
+                </td>
+                <td>
+                    @item.fechaNac.ToString("yyyy-MM-dd")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sueldo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_rol)
+                </td>
+                 <td>
+                    @(item.estado == 1?"Activo":"Inactivo")
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new {  id=item.idUser  }, new { @class = "btn btn-info btn-sm "  , @icon="fa fa-plus-circle"}) &nbsp;
+                    @Html.ActionLink("Eliminar", "Delete", new {  id=item.idUser  }, new { @class = "btn btn-danger btn-sm" ,
+                    onclick="return confirm('¿Esta seguro que desea eliminar el usuario con codigo "+@item.idUser+" ?');" })
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

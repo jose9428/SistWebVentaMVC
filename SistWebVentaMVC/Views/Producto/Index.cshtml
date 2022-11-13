@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SistWebVentaMVC.Models.Producto>
+@using SistWebVentaMVC.Utils
+@{
+    ViewData["Title"] = "Index";
+    string ruta = "../"+Archivo.RUTA_PRODUCTO;
+}
+<small class="text-muted" style="font-size:17px;">Gestión de Productos</small>
+<hr />
+<p>
+    <a asp-controller="Producto" asp-action="Crear" class="btn btn-success btn-sm">
+        <i class="fa fa-plus-circle"></i> Nuevo
+    </a>
+</p>
+@Html.Partial("~/Views/Shared/Mensajes.cshtml")
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Estado </th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td> 
+               <img src="@(ruta + item.imagen)" onerror="src='../@Archivo.RUTA_SIN_IMAGEN'" width="90" height="90" />
+            </td>
+            <td>@item.id_prod</td>
+            <td>@item.nombre</td>
+            <td>@item.precio</td>
+            <td>@item.stock</td>
+            <td>@(item.estado == 1?"Activo":"Inactivo")</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new {  id=item.id_prod  }, new { @class = "btn btn-info btn-sm" }) &nbsp;
+                @Html.ActionLink("Eliminar", "Delete", new {  id=item.id_prod  }, new { @class = "btn btn-danger btn-sm" ,
+                onclick="return confirm('¿Esta seguro que desea eliminar el producto con codigo "+@item.id_prod+" ?');" })
+            </td>
+        </tr>
+    }
+    @{
+        if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="7" class="text-center">No se encontraron datos</td>
+            </tr>   
+        }
+     }
+    </tbody>
+</table>

@@ -1,0 +1,94 @@
+﻿@model SistWebVentaMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div class="container">
+    @{Html.RenderPartial("~/Views/Shared/Mensajes.cshtml");}
+    <div class="card">
+      <div class="card-header">
+        Editar Usuario
+      </div>
+      <div class="card-body">
+        <form asp-action="Edit" class="row g-3 ">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+              <div class="col-md-6">
+                <label class="form-label">Nombres</label>
+                <input asp-for="nombres" class="form-control" />
+                 <span asp-validation-for="nombres" class="text-danger"></span>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Apellidos</label>
+                <input asp-for="apellidos" class="form-control" />
+                <span asp-validation-for="apellidos" class="text-danger"></span>
+              </div>
+
+               <div class="col-md-6">
+                <label class="form-label">Correo</label>
+                 <input asp-for="correo" class="form-control" />
+                 <span asp-validation-for="correo" class="text-danger"></span>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Genero</label>
+                 @Html.DropDownList("genero",  (IEnumerable<SelectListItem>)ViewBag.generos,  new { @class = "form-control" })
+              </div>
+      
+               <div class="col-md-6">
+                <label class="form-label">Fecha Nacimiento</label>
+                 <input asp-for="fechaNac" class="form-control" type="date" />
+                 <span asp-validation-for="fechaNac" class="text-danger"></span>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Sueldo</label>
+                  <input asp-for="sueldo" class="form-control"  />
+                  <span asp-validation-for="sueldo" class="text-danger"></span>
+              </div>
+
+               <div class="col-md-6">
+                <label class="form-label">Rol</label>
+                @Html.DropDownList("id_rol",  (IEnumerable<SelectListItem>)ViewBag.roles,  new { @class = "form-control" })
+                <span asp-validation-for="id_rol" class="text-danger"></span>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Estado</label>
+                @Html.DropDownList("estado",  (IEnumerable<SelectListItem>)ViewBag.estados,  new { @class = "form-control" })
+              </div>
+
+            <br />
+            <div class="form-group">
+                 <input asp-for="idUser" class="form-control" type="hidden" />
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-save"></i> Guardar Cambios
+                </button>
+            </div>
+        </form>
+        
+        <div>
+            <a asp-action="Index">Volver atras</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function ValidarNumero(campo){
+         var pago = document.getElementById(campo).value;
+        try {
+            pago = pago.replace(",", ".");
+            document.getElementById(campo).value = parseFloat(pago);
+        } catch (e) {
+            document.getElementById(campo).value = parseFloat(pago);
+        }
+    }
+  //  ValidarNumero("sueldo");
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SistWebVentaMVC.Models.Rol>
+
+@{
+    ViewData["Title"] = "Lista Rol";
+}
+
+<small class="text-muted" style="font-size:17px;">Listado de Roles</small>
+<hr />
+
+<div class="table-responsible">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+         @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_rol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_rol)
+                </td>
+            </tr>
+         }
+        </tbody>
+    </table>
+</div>

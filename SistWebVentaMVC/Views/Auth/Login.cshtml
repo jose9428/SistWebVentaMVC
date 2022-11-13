@@ -1,0 +1,76 @@
+﻿@model SistWebVentaMVC.Models.Usuario
+
+@{
+	ViewData["Title"] = "Login";
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SistWebVentaMVC.styles.css" asp-append-version="true" />
+	<title>Login</title>
+</head>
+
+<body style=" background-image:
+                                linear-gradient(
+                                #0CA0D3, #84B3E6
+                                );">
+	<main id="app" class="d-flex w-100"  >
+		<div class="container d-flex flex-column" style='width:80%;'>
+			<div class="row vh-100">
+				<div class="col-sm-10 col-md-6 col-lg-6 mx-auto d-table h-100">
+					<div class="d-table-cell align-middle">
+						
+						<div class="card">
+							<div class="card-body">
+								<div class="m-sm-4">
+									<div class="text-center">
+										<img src="~/img/recursos/logo.jpg" class="img-fluid rounded-circle" width="222" height="222" />
+									</div>
+									@Html.Partial("~/Views/Shared/Mensajes.cshtml")
+
+								    <form asp-action="Login" >
+										<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+										<div class="col-md-12">
+										<label class="form-label">Correo</label>
+											<input asp-for="correo" class="form-control" value="juan@gmail.com"/>
+											<span asp-validation-for="correo" class="text-danger"></span>
+										</div>
+										<!--
+
+										<div class="mb-3">
+											<label class="form-label">Contraseña</label>
+											<input name="password" class="form-control form-control-lg" type="password"  placeholder="Contraseña" />
+										</div>
+										-->
+									
+										<div class="text-center mt-3">
+											<div class="d-grid gap-2">
+												<input type="submit" value="Iniciar Sesión" class="btn btn-lg btn-primary" />
+											</div>
+
+									   </div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
