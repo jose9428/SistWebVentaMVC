@@ -4,6 +4,9 @@ using SistWebVentaMVC.Auth;
 using SistWebVentaMVC.Models;
 using SistWebVentaMVC.ModelsDA;
 using SistWebVentaMVC.Utils;
+using System.Data;
+using ClosedXML.Excel;
+using System.IO;
 
 namespace SistWebVentaMVC.Controllers
 {
@@ -108,6 +111,27 @@ namespace SistWebVentaMVC.Controllers
 
             TempData["mensaje_error"] = "No se encontraron datos del producto con el id " + id + " .";
             return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public FileResult ExportarExcel()
+        {
+
+            DataTable dt = prodDA.ListarTodosDt();
+            dt.TableName = "Productos";
+
+            using (XLWorkbook libro = new XLWorkbook())
+            {
+                var hoja = libro.Worksheets.Add(dt);
+
+                hoja.ColumnsUsed().AdjustToContents();
+                MemoryStream stream = new MemoryStream();
+                libro.SaveAs(stream);
+                return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "Reporte " + DateTime.Now.ToString() + ".xlsx");
+
+            }
         }
 
     }

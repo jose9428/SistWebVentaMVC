@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Computer\\Desktop\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj": {}
+    "D:\\Programador\\Lenguajes\\NET\\NET Core\\MVC - Auth\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Computer\\Desktop\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj": {
+    "D:\\Programador\\Lenguajes\\NET\\NET Core\\MVC - Auth\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Computer\\Desktop\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj",
+        "projectUniqueName": "D:\\Programador\\Lenguajes\\NET\\NET Core\\MVC - Auth\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj",
         "projectName": "SistWebVentaMVC",
-        "projectPath": "C:\\Users\\Computer\\Desktop\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj",
+        "projectPath": "D:\\Programador\\Lenguajes\\NET\\NET Core\\MVC - Auth\\SistWebVentaMVC\\SistWebVentaMVC\\SistWebVentaMVC.csproj",
         "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Computer\\Desktop\\SistWebVentaMVC\\SistWebVentaMVC\\obj\\",
+        "outputPath": "D:\\Programador\\Lenguajes\\NET\\NET Core\\MVC - Auth\\SistWebVentaMVC\\SistWebVentaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.97.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.10, )"

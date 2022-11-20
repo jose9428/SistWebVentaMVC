@@ -7,8 +7,12 @@
 <small class="text-muted" style="font-size:17px;">Gestión de Productos</small>
 <hr />
 <p>
-    <a asp-controller="Producto" asp-action="Crear" class="btn btn-success btn-sm">
+    <a asp-controller="Producto" asp-action="Crear" class="btn btn-primary btn-sm">
         <i class="fa fa-plus-circle"></i> Nuevo
+    </a>
+    &nbsp;
+     <a asp-controller="Producto" asp-action="ExportarExcel" class="btn btn-success btn-sm">
+        <i class="fa fa-file-excel"></i> Exportar Excel
     </a>
 </p>
 @Html.Partial("~/Views/Shared/Mensajes.cshtml")

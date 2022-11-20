@@ -8,73 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistWebVentaMVC
 build_property.RootNamespace = SistWebVentaMVC
-build_property.ProjectDir = C:\Users\Computer\Desktop\SistWebVentaMVC\SistWebVentaMVC\
+build_property.ProjectDir = D:\Programador\Lenguajes\NET\NET Core\MVC - Auth\SistWebVentaMVC\SistWebVentaMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Computer\Desktop\SistWebVentaMVC\SistWebVentaMVC
+build_property.MSBuildProjectDirectory = D:\Programador\Lenguajes\NET\NET Core\MVC - Auth\SistWebVentaMVC\SistWebVentaMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Auth/Login.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Home/Denegado.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Home/Denegado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZW5lZ2Fkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Home/Index.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Crear.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Edit.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Index.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Rol/Index.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Rol/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/Error.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/Mensajes.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/Mensajes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1lbnNhamVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Crear.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Edit.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Index.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/_ViewImports.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/_ViewStart.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Computer/Desktop/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/_Layout.cshtml]
+[D:/Programador/Lenguajes/NET/NET Core/MVC - Auth/SistWebVentaMVC/SistWebVentaMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rjxxzrtil3

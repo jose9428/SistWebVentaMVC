@@ -138,5 +138,24 @@ namespace SistWebVentaMVC.ModelsDA
             }
             return res;
         }
+
+        public DataTable ListarTodosDt()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                
+                SqlCommand cmd = new SqlCommand("select id_prod, nombre, precio, stock, estado " +
+                        " from Producto", conn);
+             //   cmd.Parameters.AddWithValue("@employee", "");
+                cmd.CommandType = CommandType.Text;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            dt.TableName = "Datos";
+            return dt;
+        }
     }
 }
